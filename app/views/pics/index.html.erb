@@ -1,0 +1,23 @@
+<div class="my-wrapper text-center">
+	<h1>View Chores</h1>
+
+	<% @pics.each do |pic| %>
+		<div class="span3 shadowbox centered">
+			<h2>
+				Hour <%= pic.hour %>
+			</h2>
+
+			<div>
+				<%= image_tag pic.image %>
+			</div>
+
+			<h3 class="custom-font3">
+				I feel <%= pic.emotion %>
+			</h3>
+
+			<h3  class="custom-font3">
+				I learned that <%= pic.learned %>
+			</h3>
+		</div>
+	<% end %>
+</div>

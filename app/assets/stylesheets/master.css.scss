@@ -1,0 +1,62 @@
+body{
+	
+	  background: url('asparagus3.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body.splashpages{
+	
+	  background: url('asparagus3.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.custom-font1 {
+	color: white;
+}
+
+.custom-font2 {
+	color: #3399FF;
+}
+
+.custom-font3 {
+font-family: Helvetica Neue Light, Helvetica Neue, Helvetica, san-serif;
+font-weight: 300;
+font-size: 20px;
+color: #3399FF;
+}
+
+.custom-font4 {
+font-family: Helvetica Neue Light, Helvetica Neue, Helvetica, san-serif;
+font-weight: 200;
+font-size: 40px;
+color: white;
+}
+
+.box h2, .box p {
+	color:white;
+}
+
+.my-wrapper h1,
+.my-wrapper h2, 
+.my-wrapper h3, 
+.my-wrapper p {
+	color:white;
+}
+
+.my-wrapper label {
+	color: white;
+	font-size: 24px;
+}
+
+.shadowbox {
+box-shadow: 2px -2px 2px 2px rgba(36,32,33,0.50);
+background-color: rgba(36,32,33,0.50);
+padding: 1%;
+margin-top: 120px;
+}

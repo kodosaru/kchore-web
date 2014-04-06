@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Testapp</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <div class="navbar navbar-inverse">
+
+
+  <div class="navbar-inner">
+    <div class="container">
+ 
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+ 
+      <!-- Be sure to leave the brand out there if you want it shown -->
+      <!-- <a class="brand" href="#">KChore</a> -->
+      <%= link_to 'KChore', root_path, :class => 'brand'  %>
+ 
+      <!-- Everything you want hidden at 940px or less, place within here -->
+      <div class="nav-collapse collapse">
+        <!-- .nav, .navbar-search, .navbar-form, etc -->
+		<ul class="nav">
+			<li>
+        		<%= link_to 'View Chores', pics_path %>
+    	</li>
+
+      <li>
+          <%= link_to 'Add Chores', new_pic_path %>
+      </li>
+
+		
+</ul>
+        <ul class="nav pull-right">
+
+      
+
+
+
+      <% if current_user.present? %>
+            <li>
+              <%= link_to current_user.email, '#' %>
+            </li>
+            <li>
+              <%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %>
+            </li>
+          <% else %>
+            <li>
+              <%= link_to 'Sign In', new_user_session_path %>
+            </li>
+
+            <li>
+              <%= link_to 'Sign Up',
+                new_user_registration_path %>
+
+            </li>
+          <% end %>
+
+
+
+  </ul>
+
+      </div>
+ 
+    </div>
+  </div>
+</div>
+</head>
+<body class="<%= params[:controller]%>">
+<script type="text/javascript">
+//alert("My First JavaScript");
+ $.backstretch([
+    "assets/asparagus3.jpg",
+    "assets/boy_doing_homework.jpg",
+    "assets/girl-wiping-counter.jpg",
+    "assets/img_2343.jpg"
+  ], {duration: 3000, fade: 750});
+ </script>
+
+<% if notice.present? %>
+       <p class="notice"><%= notice %></p>
+     <% end %>
+ <% if alert.present? %>    
+       <p class="alert"><%= alert %></p>
+   <% end %>
+
+<%= yield %>
+
+<footer>
+
+</footer>
+
+</body>
+</html>
